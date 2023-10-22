@@ -1,0 +1,117 @@
+/* Estilo básico de la barra lateral */
+.sidebar {
+  position: fixed;
+  top: 50px;
+  left: 0;
+  width: 65px;
+  height: 100%;
+  background-color: #333;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  transition: width 0.3s ease;
+  overflow-y: auto;
+  padding-top: 20px; /* Espacio en la parte superior para el botón */
+}
+
+/* Estilo para la lista ul */
+.sidebar-list {
+  list-style: none; /* Eliminamos las viñetas */
+  padding: 0;
+  margin: 0;
+}
+
+/* Estilo para los elementos li */
+.sidebar-item {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+/* Estilo para los enlaces (a) */
+.sidebar-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 0;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para los íconos dentro de los enlaces */
+.sidebar-icon {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+/* Estilo para el texto dentro de los enlaces */
+.sidebar-text {
+  font-size: 16px;
+}
+
+/* Estilo al pasar el mouse sobre los elementos li */
+.sidebar-item:hover {
+  background-color: #444;
+}
+
+/* Estilo al pasar el mouse sobre los enlaces */
+.sidebar-link:hover {
+  background-color: #555;
+}
+
+/* Estilo para el botón de toggle */
+.toggle-button {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 28px;
+  margin-left: 10px;
+  outline: none;
+}
+
+/* Estilo cuando la barra lateral está abierta */
+.sidebar-open {
+  width: 250px;
+}
+
+/* Estilo para el contenido principal */
+.content {
+  margin-left: 75px; /* Alineamos el contenido principal con la barra lateral */
+  padding: 20px; /* Agregamos espacio alrededor del contenido principal */
+}
+
+/* Estilo para los enlaces (a) */
+.sidebar-link {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilo para los íconos dentro de los enlaces */
+.sidebar-icon {
+  font-size: 28px;
+  margin-right: 10px;
+}
+
+/* Estilo para el texto dentro de los enlaces */
+.sidebar-text {
+  font-size: 17px;
+  transition: opacity 0.3s ease;
+  font-family: Century Gothic, 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.hidden-text {
+  opacity: 0;
+}
+
+/* Estilo al pasar el mouse sobre los enlaces */
+.sidebar-link:hover {
+  background-color: #555;
+}
+
+

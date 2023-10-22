@@ -1,0 +1,15 @@
+<div class="sidebar" [ngClass]="{'sidebar-open': sidebarOpen}">
+  <button (click)="toggleSidebar()" class="toggle-button">
+    <i class="material-icons">{{sidebarOpen ? 'chevron_left' : 'chevron_right'}}</i>
+  </button>
+  <ul class="sidebar-list">
+    <li *ngFor="let tab of tabs" class="sidebar-item">
+      <a [routerLink]="['/', tab]" class="sidebar-link">
+        <div class="sidebar-icon">
+          <i class="material-icons">{{getIcon(tab)}}</i>
+        </div>
+        <div class="sidebar-text" [ngClass]="{'hidden-text': !sidebarOpen}">{{tab}}</div>
+      </a>
+    </li>
+  </ul>
+</div>

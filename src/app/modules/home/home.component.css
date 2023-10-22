@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body, h1, h2, p, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: linear-gradient(135deg, #5280d7 0%, #f0f0f0 100%);
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Pseudo-elemento para crear las formas dibujadas */
+
+
+
+.header {
+  padding: 20px;
+  background-color: #2d4d88;
+  border-radius: 10px;
+  color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  width: 100%;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+
+.header p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #adb042;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #6db1e9;
+}
+
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.feature {
+  text-align: center;
+  width: 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  margin: 10px;
+}
+
+.feature i {
+  font-size: 2rem;
+  color: #3498db;
+}
+
+.feature h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.feature p {
+  font-size: 1rem;
+  color: #777;
+}
+
+@media screen and (max-width: 768px) {
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .header p {
+    font-size: 0.9rem;
+  }
+
+  .cta-button {
+    padding: 8px 16px;
+    font-size: 0.9rem;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 80%;
+  }
+}

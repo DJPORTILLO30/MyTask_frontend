@@ -1,0 +1,52 @@
+<div class="auth-container">
+  <div class="auth-card" *ngIf="!mostrarRegistro">
+    <h2>Iniciar Sesión</h2>
+    <div class="alert alert-danger" *ngIf="submittedInicioSesion && datosInicioSesion.invalid">
+      Por favor, complete todos los campos.
+    </div>
+    <form *ngIf="datosInicioSesion" [formGroup]="datosInicioSesion" (ngSubmit)="iniciarSesion()">
+      <input type="email" formControlName="email" placeholder="Correo Electrónico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <div class="alert alert-danger" *ngIf="datosInicioSesion.get('email')?.hasError('required') && datosInicioSesion.get('email')?.touched">
+        El correo electrónico es obligatorio.
+      </div>
+      <div class="alert alert-danger" *ngIf="datosInicioSesion.get('email')?.hasError('email') && datosInicioSesion.get('email')?.touched">
+        El correo electrónico no es válido.
+      </div>
+      <div class="alert alert-danger" *ngIf="datosInicioSesion.get('password')?.hasError('required') && datosInicioSesion.get('password')?.touched">
+        La contraseña es obligatoria.
+      </div>
+      <button type="submit">Iniciar Sesión</button>
+    </form>
+    <p>¿No tienes una cuenta? <a (click)="alternarFormulario()">Registrarse</a></p>
+  </div>
+
+  <div class="auth-card" *ngIf="mostrarRegistro">
+    <h2>Registrarse</h2>
+    <div class="alert alert-danger" *ngIf="submittedRegistro && datosRegistro.invalid">
+      Por favor, complete todos los campos.
+    </div>
+    <form [formGroup]="datosRegistro" (ngSubmit)="registrarUsuario()">
+      <input type="text" formControlName="username" placeholder="Nombre de usuario">
+      <input type="email" formControlName="email" placeholder="Correo Electrónico">
+      <input type="password" formControlName="password" placeholder="Contraseña">
+      <div class="alert alert-danger" *ngIf="datosRegistro.get('username')?.hasError('required') && datosRegistro.get('username')?.touched">
+        El nombre de usuario es obligatorio.
+      </div>
+      <div class="alert alert-danger" *ngIf="showEmailAlert && (datosRegistro.get('email')?.hasError('required') || datosRegistro.get('email')?.hasError('email')) && datosRegistro.get('email')?.touched">
+        El correo electrónico es obligatorio.
+      </div>
+      <div class="alert alert-danger" *ngIf="datosRegistro.get('email')?.hasError('email') && datosRegistro.get('email')?.touched">
+        El correo electrónico no es válido.
+      </div>
+      <div class="alert alert-danger" *ngIf="showPasswordAlert && (datosRegistro.get('password')?.hasError('required') || datosRegistro.get('password')?.hasError('minlength')) && datosRegistro.get('password')?.touched">
+        La contraseña es obligatoria.
+      </div>
+      <div class="alert alert-danger" *ngIf="datosRegistro.get('password')?.hasError('minlength') && datosRegistro.get('password')?.touched">
+        La contraseña debe tener al menos 6 caracteres.
+      </div>
+      <button type="submit">Registrarse</button>
+    </form>
+    <p>¿Ya tienes una cuenta? <a (click)="alternarFormulario()">Iniciar Sesión</a></p>
+  </div>
+</div>

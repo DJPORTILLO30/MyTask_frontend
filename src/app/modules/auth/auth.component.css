@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+body, h1, h2, p, a {
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Contenedor principal */
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #bee0f6 0%, #175181 100%);
+}
+
+/* Tarjeta de autenticación */
+.auth-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  width: 500px;
+  text-align: center;
+}
+
+/* Título */
+h2 {
+  color: #00385d;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+/* Formulario */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Campos de entrada */
+input {
+  margin: 10px 0;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+input:focus {
+  border-color: #00385d;
+}
+
+/* Botón */
+button {
+  background-color: #00385d;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6db1e9;
+}
+
+/* Enlace de alternar formulario */
+p a {
+  color: #00385d; /* Color original */
+  text-decoration: underline; /* Subrayado */
+  font-size: 1rem;
+  transition: color 0.3s ease, text-decoration 0.3s ease; /* Transiciones para color y subrayado */
+}
+
+p a:hover {
+  color: #6db1e9;
+}
