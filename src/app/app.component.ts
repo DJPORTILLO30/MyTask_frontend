@@ -15,7 +15,7 @@ export class AppComponent {
   title = 'MyTask';
   perfilData: any;
   usuarioLogueado: boolean = false; // Variable para controlar si el usuario ha iniciado sesión
-  private baseUrl = environment.backendUrl;
+  public baseUrl = environment.backendUrl;
   private _items = new BehaviorSubject<Usuario[]>([]);
 
   set items(value: Usuario[]) {

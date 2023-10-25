@@ -23,7 +23,7 @@ export class AuthComponent implements OnInit {
   showUsernameAlert: boolean = false;
 
 
-  private baseUrl = environment.backendUrl;
+  public baseUrl = environment.backendUrl;
 
   constructor(
     private fb: FormBuilder,

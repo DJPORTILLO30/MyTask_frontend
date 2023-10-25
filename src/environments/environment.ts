@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  backendUrl: 'http://localhost:3000/',
+  backendUrl: 'https://todoappumg-d3d9bce1c5d5.herokuapp.com/',
 };
 
 /*
