@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Quicksand:wght@400;600;700&family=Shadows+Into+Light&display=swap');
+
+.modal-header{
+    background-color: #0765a3;
+    color:aliceblue;
+    font-family: Poppins;
+}
+.label{
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea, .form-check-input .form-group select {
+    margin-bottom: 10px;
+    
+  }
+  
+  
+  #dueDate{
+    margin-left: 35px;
+    padding: 3px;
+    margin-top: 10px;
+  }
+  #priority{
+    padding: 2px;
+    margin-left: 10px;
+  }
+
+
+  

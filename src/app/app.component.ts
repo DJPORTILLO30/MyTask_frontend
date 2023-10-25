@@ -5,6 +5,8 @@ import { BehaviorSubject } from 'rxjs';
 import { Usuario } from './model/usuario';
 import { environment } from 'src/environments/environment';
 import { AuthService } from './services/auth.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CrearTareaComponent } from './modules/crear-tarea/crear-tarea.component';
 
 @Component({
   selector: 'app-root',
@@ -26,7 +28,7 @@ export class AppComponent {
     return this._items.getValue();
   }
 
-  constructor(private router: Router, private http: HttpClient, private authService: AuthService) {
+  constructor(private router: Router, private http: HttpClient, private authService: AuthService, private modalService: NgbModal) {
     this.authService.usuarioAutenticado$.subscribe((autenticado) => {
       this.usuarioLogueado = autenticado;
     });
@@ -70,16 +72,16 @@ export class AppComponent {
     this.router.navigate(['/tareas']);
   }
 
-  redirigirRecientes() {
-    this.router.navigate(['/recientes']);
-  }
-
-  redirigirSubidas() {
-    this.router.navigate(['/subidas']);
-  }
-
   redirigirCrearTarea() {
-    this.router.navigate(['/crear-tarea']);
+    const modal = this.modalService.open(CrearTareaComponent);
+    modal.result.then(
+      this.handleModalCrearTareaClose.bind(this),
+      this.handleModalCrearTareaClose.bind(this)
+    )
+  }
+
+  handleModalCrearTareaClose(){
+    alert("Se ha cerrado el modal");
   }
 
   cerrarSesion() {

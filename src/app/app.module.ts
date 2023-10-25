@@ -12,6 +12,8 @@ import { AppBarComponent } from './modules/app-bar/app-bar.component';
 import { HomeComponent } from './modules/home/home.component';
 import { AuthComponent } from './modules/auth/auth.component';
 import { InicioSesionExitosoComponent } from './modules/inicio-sesion-exitoso/inicio-sesion-exitoso.component';
+import { CrearTareaComponent } from './modules/crear-tarea/crear-tarea.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -22,15 +24,18 @@ import { InicioSesionExitosoComponent } from './modules/inicio-sesion-exitoso/in
     HomeComponent,
     AuthComponent,
     InicioSesionExitosoComponent,
+    CrearTareaComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    [FormsModule, HttpClientModule],
+    [FormsModule, HttpClientModule,
+    NgbModule],
   ],
   providers: [AuthGuard],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[CrearTareaComponent]
 })
 export class AppModule { }
